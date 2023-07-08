@@ -1,9 +1,3 @@
-# trade-utils
-Functions to complement trading research, backtesting and bot scripts
-
-
-## time_sleep example ##
-```python
 from  tradeutil import time_sleep
 import datetime
 import time
@@ -20,4 +14,3 @@ print(f"Waiting {tsc.time_sleep_final} Seconds, Time: {datetime.datetime.now()}"
 #wait the calculated interval in seconds and visually confirm that activated time is correct
 time.sleep(tsc.time_sleep_final)
 print(f"{tsc.time_sleep_final} Seconds Elapsed, Time: {datetime.datetime.now()}")
-```
