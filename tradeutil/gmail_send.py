@@ -110,7 +110,7 @@ def email_out(sender_address = None,
             attach_file.add_header('Content-Disposition', 'attachment', filename= os.path.basename(attachment))
             msg.attach(attach_file)
 
-#html_output = "your html here"
+
 
     if message_images is not None:
         for image in message_images:
@@ -153,21 +153,3 @@ def email_string_checks(email_list):
             return 102, f"Invalid Email String Format {email_address}"
 
 
-if __name__ == "__main__":
-        
-
-    mail_code, mail_text = email_out(sender_address = "hp99.finance@gmail.com",
-              sender_pass = "xvsdmwbeeqobwfrq",
-              receiver_address = ["jaggsk@yahoo.co.uk","kevin.jaggs@gmail.com"],
-              receiver_address_cc = ["kevin.jaggs@gmail.com","jaggsk@yahoo.co.uk"],
-              receiver_address_bcc = ["jaggsk@yahoo.co.uk","kevin.jaggs@gmail.com"],
-              message_title = "Python Email Test",
-              message_attachments = ["C:\\Users\\jaggs\\OneDrive\\Finance\\Daily Scan\\daily_nasdaq100_uptrend.txt","C:\\Users\\jaggs\\OneDrive\\Finance\\Daily Scan\\daily_nasdaq100_downtrend.txt"],
-              message_images = ["C:\\Users\\jaggs\\OneDrive\\Pictures\\fossil_incroyable.jpg"],
-              message_text = "Dear All,\nPlease find a test email message + attachments.\nBest Regards,\nKevin"
-              )
-    print(f"Return Code: {mail_code}\nReturn Message: {mail_text}")
-
-    #print(''.join(["jaggsk@yahoo.co.uk","jaggsk@yahoo.co.uk"]))
-    #print(','.join(map(str,["jaggsk@yahoo.co.uk","jaggsk@yahoo.co.uk"])))
-    #print(','.join(map(str,["jaggsk@yahoo.co.uk"])))
